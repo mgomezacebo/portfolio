@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a192f;
+            color: #8892b0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            padding: 2rem 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(10, 25, 47, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: #64ffda;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffffff;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: #ccd6f6;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            color: #ccd6f6;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background-color: #112240;
+            border-radius: 10px;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-card h3 {
+            color: #e6f1ff;
+            margin-bottom: 1rem;
+        }
+
+        .project-card p {
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            text-align: justify;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #64ffda;
+            color: #0a192f;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            align-self: flex-start;
+        }
+
+        .btn:hover {
+            background-color: #45c7a8;
+        }
+
+        .shape {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .shape-1 {
+            top: 10%;
+            left: 5%;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(100, 255, 218, 0.1);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+
+        .shape-2 {
+            bottom: 20%;
+            right: 10%;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(204, 214, 246, 0.1);
+            border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+        }
+
+        .about-me {
+            background-color: #112240;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .education-card {
+            background-color: #112240;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .education-card h3 {
+            color: #e6f1ff;
+            margin-bottom: 1rem;
+        }
+
+        .contact-form {
+            background-color: #112240;
+            border-radius: 10px;
+            padding: 2rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border: none;
+            background-color: #1d3557;
+            color: #e6f1ff;
+        }
+
+        .contact-form textarea {
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#formacion">Formación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h1>Hola, soy Martín</h1>
+                <p>Desarrollador de software apasionado por crear soluciones innovadoras</p>
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="section">
+            <div class="container">
+                <h2>Sobre mí</h2>
+                <div class="about-me">
+                    <p>
+                        Soy un joven desarrollador de software de 14 años, apasionado por la tecnología y la programación. Con más de dos años de experiencia en la creación de proyectos, he desarrollado habilidades en HTML, CSS, y JavaScript para construir páginas web y aplicaciones interactivas, así como en programación con C++ para proyectos con Arduino, utilizando el simulador de circuitos Tinkercad.
+                      <br><br>
+                        Además de mi aprendizaje autodidacta, he cursado asignaturas como Tecnología y Digitalización y Ciencias de la Computación en mi instituto, lo que ha fortalecido mi conocimiento y comprensión de diversas herramientas y tecnologías. Entre mis proyectos más destacados se encuentran Arimo, Martin Games, Martin Browser, y BitLink, donde he podido combinar mi interés por la creación de sistemas útiles con la experimentación en tecnologías emergentes, como la inteligencia artificial.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="section">
+            <div class="container">
+                <h2>Mis Proyectos</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>BitLink</h3>
+                        <p>Es un sistema que permite enviar señales en código binario por radiofrecuencia entre dos microprocesadores micro:bit.</p>
+                        <a href="https://sites.google.com/view/bitlink-sistema/" class="btn">Ver más</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Arimo</h3>
+                        <p>Arimo es un asistente virtual en versión web y APP para Android basado en ChatGPT 3.5. Para poder personalizar el chat use la herramienta Chatbase.co, para crear y diseñar la web use Google Sites y para crear la APP use WebToApp.</p>
+                        <a href="endesarrollo.html" class="btn">Ver más</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Martin Browser</h3>
+                        <p>Martin Browser es un navegador basado en el sistema de búsqueda en la web de Google, implementado con html. Para crear y diseñar la web use la herramienta Google Sites.</p>
+                        <a href="endesarrollo.html" class="btn">Ver más</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>To do list</h3>
+                        <p>Cree una pequeña aplicación web con HTML 5, CSS 3 y JavaScript que permite a los usuarios registrar sus tareas pendientes y hacer un seguimiento de estas.</p>
+                        <a href="todolist.html" class="btn">Ver más</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Martin Games</h3>
+                        <p>Cuando tenía doce años cree una página web con Blogger con videojuegos programados por mi en Scratch. Esta página se hizo muy popular en mi curso y está a punto de llegar a las mil visitas.</p>
+                        <a href="martingames.html" class="btn">Ver más</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Asteroid Master (colaborador)</h3>
+                        <p>Publique en la plataforma el videojuego, diseñe las imagenes y el logotipo del creador (Game On Alex) y cree y diseñe una página web para Game On Alex usando Google Sites.</p>
+                        <a href="endesarrollo.html" class="btn">Ver más</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>Time Boxing</h3>
+                        <p>Cree una aplicación web diseñada para dispositivos móviles de un temporizador ajustable de boxeo. Para programarla use HTML 5, CSS 3 y JavaScript.</p>
+                        <a href="timeboxing.html" class="btn">Ver más</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>CSV Anializer</h3>
+                        <p>Cree un sistema con HTML 5, CSS 3 y JavaScript que permite buscar datos en un archivo CSV existente con una interfaz de una consola de programación.</p>
+                        <a href="endesarrollo.html" class="btn">Ver más</a>
+                    </div>
+                    <div class="project-card">
+                        <h3>ObjetAI</h3>
+                        <p>Cree un sistema con HTML 5, CSS 3 y JavaScript basado en Inteligencia Artificial el cuál aún no teniendo un 100% de efectividad podía reconocer objetos por medio de la cámara de video del usuario.</p>
+                        <a href="objectai.html" class="btn">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="formacion" class="section">
+            <div class="container">
+                <h2>Formación</h2>
+                <div class="education-card">
+                    <h3>Asignatura optativa de Ciencias de la Computación</h3>
+                    <p>Colegio Cargenal Spínola</p>
+                    <p>2022 - 2024</p>
+                </div>
+                <div class="education-card">
+                    <h3>Asignatura obligatoria de Tecnología y Digitalización</h3>
+                    <p>Colegio Cardenal Spínola</p>
+                    <p>2023 - Actualidad</p>
+                </div>
+                <div class="education-card">
+                    <h3>MOOC sobre Inteligencia Artificial Generativa para Estudiantes</h3>
+                    <p>Univerisdad Nacional de Educación a Distancia</p>
+                    <p>2023 - 2024</p>
+                </div>
+                <div class="education-card">
+                    <h3>Curso de desarrollo web</h3>
+                    <p>Mimo</p>
+                    <p>2024 - Actualidad</p>
+                </div>
+                <div class="education-card">
+                    <h3>Curso de desarrollo web</h3>
+                    <p>Universidad de Alicante</p>
+                    <p>2024 - Actualidad</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section">
+            <div class="container">
+                <h2>Contacto</h2>
+                <div class="contact-form">
+                    <p>+34 699 320 466</p>
+                    <br>
+                    <p>martin.gomez.acebo@gmail.com</p>
+                    <br>
+                    <a href="https://ywptlridsg2.typeform.com/to/AGhstBFK" class="btn">Formulario de contacto</a>
+                  </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".hero h1", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.5
+        });
+
+        gsap.from(".hero p", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            delay: 0.8
+        });
+
+        gsap.from(".project-card", {
+            scrollTrigger: {
+                trigger: ".projects",
+                start: "top center"
+            },
+            opacity: 0,
+            y: 50,
+            stagger: 0.2,
+            duration: 0.8
+        });
+
+        gsap.to(".shape-1", {
+            scrollTrigger: {
+                trigger: "body",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1
+            },
+            rotate: 360,
+            scale: 1.2,
+            duration: 3
+        });
+
+        gsap.to(".shape-2", {
+            scrollTrigger: {
+                trigger: "body",
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 1
+            },
+            rotate: -360,
+            scale: 0.8,
+            duration: 3
+        });
+    </style>
+</body>
+</html>
