@@ -290,37 +290,31 @@
         <section id="formacion" class="section">
             <div class="container">
                 <h2>Formación</h2>
-                <div class="education-card">
-                    <h3>Asignatura optativa de Ciencias de la Computación</h3>
-                    <p>Colegio Cargenal Spínola</p>
-                    <p>2022 - 2024</p>
-                </div>
-                <div class="education-card">
-                    <h3>Asignatura obligatoria de Tecnología y Digitalización</h3>
-                    <p>Colegio Cardenal Spínola</p>
-                    <p>2023 - Actualidad</p>
-                </div>
-                <div class="education-card">
-                    <h3>MOOC sobre Inteligencia Artificial Generativa para Estudiantes</h3>
-                    <p>Univerisdad Nacional de Educación a Distancia</p>
-                    <p>2023 - 2024</p>
-                </div>
-                <div class="education-card">
-                    <h3>Curso de desarrollo web</h3>
-                    <p>Mimo</p>
-                    <p>2024 - Actualidad</p>
-                </div>
-                <div class="education-card">
-                    <h3>Curso de desarrollo web</h3>
-                    <p>Universidad de Alicante</p>
-                    <p>2024 - Actualidad</p>
-                </div>
-                <div class="education-card">
-                    <h3>Conferencia mejora tu productividad con IA</h3>
-                    <p>Google - Conseulo Verdú</p>
-                    <p>Miércoles 16 de octubre dell 2024</p>
-                </div>
-            </div>
+                <h3>Filtros</h3>
+                <label for="filter-type">Tipo de formación:</label>
+        <select id="filter-type">
+            <option value="">Todos</option>
+            <option value="Asignatura escolar">Asignatura escolar</option>
+            <option value="Curso">Curso</option>
+            <option value="Conferencia">Conferencia</option>
+        </select>
+
+        <label for="filter-topic">Tema:</label>
+        <select id="filter-topic">
+            <option value="">Todos</option>
+            <option value="IA">IA</option>
+            <option value="Desarrollo web">Desarrollo web</option>
+            <option value="Desarrollo de aplicaciones">Desarrollo de aplicaciones</option>
+        </select>
+
+        <label for="filter-status">Estado:</label>
+        <select id="filter-status">
+            <option value="">Todos</option>
+            <option value="En curso">En curso</option>
+            <option value="Terminado">Terminado</option>
+        </select>
+
+        <a class="btn" id="apply-filters">Aplicar</a>
         </section>
 
         <section id="contacto" class="section">
@@ -391,7 +385,35 @@
             scale: 0.8,
             duration: 3
         });
+        document.getElementById('apply-filters').addEventListener('click', function() {
+    const typeFilter = document.getElementById('filter-type').value;
+    const topicFilter = document.getElementById('filter-topic').value;
+    const statusFilter = document.getElementById('filter-status').value;
+
+    const cards = document.querySelectorAll('.education-card');
+
+    cards.forEach(card => {
+        const cardType = card.getAttribute('data-type');
+        const cardTopic = card.getAttribute('data-topic');
+        const cardStatus = card.getAttribute('data-status');
+
+        let isVisible = true;
+
+        if (typeFilter && cardType !== typeFilter) {
+            isVisible = false;
+        }
+
+        if (topicFilter && cardTopic !== topicFilter) {
+            isVisible = false;
+        }
+
+        if (statusFilter && cardStatus !== statusFilter) {
+            isVisible = false;
+        }
+
+        card.style.display = isVisible ? 'block' : 'none';
+    });
+});
     </style>
 </body>
 </html>
-//Fin
