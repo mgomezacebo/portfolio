@@ -100,10 +100,10 @@ nav ul li a:hover {
     text-align: center;
 }
 
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+.project-grid { 
+    display: block;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+    gap: 10px; /* Espaciado entre los elementos */
 }
 
 .project-card {
@@ -111,12 +111,15 @@ nav ul li a:hover {
     border-radius: 10px;
     padding: 2rem;
     transition: transform 0.3s ease;
-    display: flex;
+    display: block;
     flex-direction: column;
     height: 100%;
-    margin: 1rem 0; /* Añadido margen superior e inferior */
-}
-
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin: 5px;
+}     
+      
 .project-card:hover {
     transform: translateY(-10px);
 }
@@ -194,21 +197,7 @@ nav ul li a:hover {
     background-color: #112240;
     border-radius: 10px;
     padding: 2rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    border: none;
-    background-color: #1d3557;
-    color: #e6f1ff;
-}
-
-.contact-form textarea {
-    height: 150px;
+    text-align: center;
 }
 </style>
 </head>
@@ -218,10 +207,10 @@ nav ul li a:hover {
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#formacion">Formación</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href=login.html class="btn">Área privada</a></li>
             </ul>
         </nav>
     </header>
@@ -229,7 +218,7 @@ nav ul li a:hover {
     <main>
         <section id="inicio" class="hero">
             <div class="container">
-                <h1>Hola, soy Martín</h1>
+                <h1>Hola, soy Martín Gómez-Acebo</h1>
                 <p>Desarrollador de software apasionado por crear soluciones innovadoras</p>
             </div>
         </section>
@@ -239,31 +228,48 @@ nav ul li a:hover {
                 <h2>Sobre mí</h2>
                 <div class="about-me">
                     <p>
-                        Soy un joven desarrollador de software de 14 años, apasionado por la tecnología y la programación. Con más de dos años de experiencia en la creación de proyectos, he desarrollado habilidades en HTML, CSS, y JavaScript para construir páginas web y aplicaciones interactivas, así como en programación con C++ para proyectos con Arduino, utilizando el simulador de circuitos Tinkercad.
+                        Soy un joven desarrollador de software, apasionado por la tecnología y la programación. Con experiencia en la creación de proyectos, he desarrollado habilidades en HTML, CSS, y JavaScript para construir páginas web y aplicaciones interactivas, así como en programación con C++ para proyectos con Arduino, utilizando el simulador de circuitos Tinkercad.
                       <br><br>
-                        Además de mi aprendizaje autodidacta, he cursado asignaturas como Tecnología y Digitalización y Ciencias de la Computación en mi colegio, lo que ha fortalecido mi conocimiento y comprensión de diversas herramientas y tecnologías. Entre mis proyectos más destacados se encuentran Arimo, Martin Games, Martin Browser, y BitLink, donde he podido combinar mi interés por la creación de sistemas útiles con la experimentación en tecnologías emergentes, como la inteligencia artificial.
+                        Entre mis proyectos más destacados se encuentran Arimo, Martin Games, Martin Browser, y BitLink, donde he podido combinar mi interés por la creación de sistemas útiles con la experimentación en tecnologías emergentes, como la inteligencia artificial.
                     </p>
                 </div>
-            </div>
+          </div>
         </section>
-
+        
+        <section id="habilidades" class="section">
+          <div class="container">
+            <h2>Habilidades</h2>
+            <div class="education-card">
+              <h3>Creación de imágenes con IA</h3>
+              <p>Tengo conocimiento de creación de imagenes con varios modelos de inteligencia artificial (Canva, DALL-e, ChatGPT 4o, Copilot...)</p>
+            </div>
+            <div class="education-card">
+              <h3>Creación de chatbots para negocios con IA</h3>
+              <p>Se cómo usar plataformas que permiten crear asistentes o chatbots con IA para negocios e interegarlos de manera óptima en sus sitios web.</p>
+            </div>
+            <div class="education-card">
+              <h3>IA para ser más productivo</h3>
+              <p>Se cómo utilizar diferentes herramientas de IA para aumentar la productividad, además cuento con formación sobre ello.</p>
+            </div>
+          </div>
+        </section>
         <section id="proyectos" class="section">
             <div class="container">
                 <h2>Mis Proyectos</h2>
                 <div class="project-grid">
                     <div class="project-card">
                         <h3>BitLink</h3>
-                        <p>Es un sistema que permite enviar señales en código binario por radiofrecuencia entre dos microprocesadores micro:bit.</p>
+                        <p>Es un sistema que permite enviar señales en código binario por radiofrecuencia entre dos microprocesadores micro:bit, pero es necesario que hayan dos operadores del sistema, cada uno en una placa.</p>
                         <a href="https://sites.google.com/view/bitlink-sistema/" class="btn">Ver más</a>
                     </div>
                     <div class="project-card">
                         <h3>Arimo</h3>
-                        <p>Arimo es un asistente virtual en versión web y APP para Android basado en ChatGPT 3.5. Para poder personalizar el chat use la herramienta Chatbase.co, para crear y diseñar la web use Google Sites y para crear la APP use WebToApp.</p>
+                        <p>Arimo es un asistente virtual en versión web y APP para Android basado en ChatGPT 4o. Para poder personalizar el chat use la herramienta Chatbase.co, para crear y diseñar la web use Google Sites y para crear la APP use WebToApp.</p>
                         <a href="arimo.html" class="btn">Ver más</a>
                     </div>
                     <div class="project-card">
                         <h3>Martin Browser</h3>
-                        <p>Martin Browser es un navegador basado en el sistema de búsqueda en la web de Google, implementado con html. Para crear y diseñar la web use la herramienta Google Sites.</p>
+                        <p>Es una navegador disponible para Android que permite cambiar al usuario mucho más rápido etre los buscadores (Google, Bing y Duck Duck Go).</p>
                         <a href="endesarrollo.html" class="btn">Ver más</a>
                     </div>
                     <div class="project-card">
@@ -299,53 +305,36 @@ nav ul li a:hover {
                 </div>
             </div>
         </section>
-
         <section id="formacion" class="section">
-            <div class="container">
-                <h2>Formación</h2>
-            <div class="about-me"
-                <h3>Filtros</h3>
-                <label for="filter-type">Tipo de formación:</label>
-        <select id="filter-type">
-            <option value="">Todos</option>
-            <option value="Asignatura escolar">Asignatura escolar</option>
-            <option value="Curso">Curso</option>
-            <option value="Conferencia">Conferencia</option>
-        </select>
-
-        <label for="filter-topic">Tema:</label>
-        <select id="filter-topic">
-            <option value="">Todos</option>
-            <option value="IA">IA</option>
-            <option value="Desarrollo web">Desarrollo web</option>
-            <option value="Desarrollo de aplicaciones">Desarrollo de aplicaciones</option>
-        </select>
-
-        <label for="filter-status">Estado:</label>
-        <select id="filter-status">
-            <option value="">Todos</option>
-            <option value="En curso">En curso</option>
-            <option value="Terminado">Terminado</option>
-        </select>
-
-        <a class="btn" id="apply-filters">Aplicar</a>
-    </div>
+          <div class="container">
+            <h2>Formación</h2>
+            <div class="education-card">
+              <h3>IA para estudiantes</h3>
+              <p>2024</p>
+              <p>Universidad Nacional de Educación a Distancia</p>
+            </div>
+            <div class="education-card">
+              <h3>Google: IA y productividad</h3>
+              <p>2024</p>
+              <p>Santander Open Academy y Google</p>
+            </div>
+            <div class="education-card">
+              <h3>HTML y CSS</h3>
+              <p>2024 - Actaulidad</p>
+              <p>Universidad de Diseño y Tecnología</p>
+            </div>
+          </div>
         </section>
 
         <section id="contacto" class="section">
             <div class="container">
-                <h2>Formulario</h2>
+                <h2>Contacto</h2>
                 <div class="contact-form">
                     <p>+34 699 320 466</p>
-                    <br>
                     <p>martin.gomez.acebo@gmail.com</p>
-                    <br>
                     <a href="https://ywptlridsg2.typeform.com/to/AGhstBFK" class="btn">Formulario de contacto</a>
                   </div>
             </div>
-        </section>
-        <section>
-            Martín Gómez-Acebo. aldrich
         </section>
     </main>
 
@@ -432,6 +421,7 @@ nav ul li a:hover {
         card.style.display = isVisible ? 'block' : 'none';
     });
 });
-    </style>
+    </script>
 </body>
+</html>
 </html>
