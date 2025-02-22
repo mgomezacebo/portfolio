@@ -18,12 +18,25 @@
         const validNFC = ["04:8a:37:5a:68:68:80", "04:64:3d:0a:b8:75:80"];
         const validKey = "HCJHttp://";
 
-        document.getElementById("nfc-btn").addEventListener("click", () => {
-            let nfcTag = prompt("Escanea tu NFC (simulado)");
-            if (validNFC.includes(nfcTag)) {
-                authenticateUser();
-            } else {
-                alert("NFC no válido");
+        document.getElementById("nfc-btn").addEventListener("click", async () => {
+            if (!("NDEFReader" in window)) {
+                alert("Tu dispositivo no soporta NFC o el navegador no lo permite.");
+                return;
+            }
+
+            try {
+                const ndef = new NDEFReader();
+                await ndef.scan();
+                
+                ndef.addEventListener("reading", ({ serialNumber }) => {
+                    if (validNFC.includes(serialNumber)) {
+                        authenticateUser();
+                    } else {
+                        alert("NFC no válido");
+                    }
+                });
+            } catch (error) {
+                alert("Error al leer NFC: " + error);
             }
         });
 
