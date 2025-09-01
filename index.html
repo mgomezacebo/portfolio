@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martín Gómez-Acebo Baldrich | Desarrollador en Madrid</title>
+  <meta name="description" content="Portfolio de Martín Gómez-Acebo Baldrich, programador de software joven en Madrid. Descubre mis habilidades, proyectos y cómo contactarme. Especializado en desarrollo web y optimizado para búsquedas de programadores en Madrid.">
+  <meta name="keywords" content="Martín Gómez-Acebo Baldrich, programador Madrid, desarrollador web Madrid, software, portfolio, joven, IA, inteligencia artificial, proyectos, contacto">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="main.js"></script>
+  <link rel="icon" href="favicon.ico">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            primary: '#6366f1', // Indigo-500
+            secondary: '#a78bfa', // Violet-400
+            accent: '#06b6d4', // Cyan-500
+            bg: '#f8fafc', // Slate-50
+            dark: '#0f172a', // Slate-900
+          },
+        },
+      },
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-bg text-dark font-sans">
+  <!-- Redirección automática -->
+  <script>
+    // Solo redirige si no hay hash en la URL
+    if (!window.location.hash) {
+      if (window.innerWidth <= 768) {
+        window.location.hash = 'mobile';
+      } else {
+        window.location.hash = 'desktop';
+      }
+    }
+  </script>
+  <!-- Navbar -->
+  <header id="desktop" class="hidden md:block sticky top-0 z-50 bg-gradient-to-r from-primary via-secondary to-accent shadow-lg animate-fade-in">
+    <nav class="flex justify-between items-center px-10 py-5">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md text-primary font-extrabold text-2xl">M</div>
+        <span class="text-2xl font-extrabold text-white tracking-tight">Martín</span>
+      </div>
+      <ul class="flex gap-8 text-base font-semibold">
+        <li><a href="#sobre-mi" class="text-white font-semibold px-4 py-2 rounded transition-colors duration-200 hover:text-accent">Sobre mí</a></li>
+        <li><a href="#habilidades" class="text-white font-semibold px-4 py-2 rounded transition-colors duration-200 hover:text-accent">Habilidades</a></li>
+        <li><a href="#proyectos" class="text-white font-semibold px-4 py-2 rounded transition-colors duration-200 hover:text-accent">Proyectos</a></li>
+        <li><a href="#contacto" class="text-white font-semibold px-4 py-2 rounded transition-colors duration-200 hover:text-accent">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Navbar móvil -->
+  <header id="mobile" class="md:hidden sticky top-0 z-50 bg-gradient-to-r from-primary via-secondary to-accent shadow-lg animate-fade-in">
+    <nav class="flex justify-between items-center px-4 py-4">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md text-primary font-extrabold text-xl">M</div>
+        <span class="text-xl font-extrabold text-white tracking-tight">Martín</span>
+      </div>
+      <button id="menu-btn" class="focus:outline-none">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden flex-col gap-2 px-2 py-2 bg-white/90 shadow animate-fade-in rounded-b-xl">
+      <a href="#sobre-mi" class="block w-full text-white font-bold px-4 py-3 rounded-lg bg-primary/80 shadow-sm mb-2 transition-all duration-200 hover:bg-accent/90 hover:text-white">Sobre mí</a>
+      <a href="#habilidades" class="block w-full text-white font-bold px-4 py-3 rounded-lg bg-primary/80 shadow-sm mb-2 transition-all duration-200 hover:bg-accent/90 hover:text-white">Habilidades</a>
+      <a href="#proyectos" class="block w-full text-white font-bold px-4 py-3 rounded-lg bg-primary/80 shadow-sm mb-2 transition-all duration-200 hover:bg-accent/90 hover:text-white">Proyectos</a>
+      <a href="#formacion" class="block w-full text-white font-bold px-4 py-3 rounded-lg bg-primary/80 shadow-sm mb-2 transition-all duration-200 hover:bg-accent/90 hover:text-white">Formación</a>
+      <a href="#contacto" class="block w-full text-white font-bold px-4 py-3 rounded-lg bg-primary/80 shadow-sm transition-all duration-200 hover:bg-accent/90 hover:text-white">Contacto</a>
+    </div>
+  </header>
+  <!-- Hero -->
+  <section class="max-w-4xl mx-auto mt-16 mb-12 px-4 text-center animate-fade-in-up">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-primary mb-4">¡Hola! Soy <span class="text-accent">Martín</span></h1>
+    <h2 class="text-xl md:text-2xl text-dark/80 mb-6">Desarrollador de software apasionado por crear soluciones innovadoras</h2>
+  </section>
+  <!-- Separador -->
+  <div class="w-full h-1 bg-gradient-to-r from-primary via-secondary to-accent mb-12"></div>
+  <!-- Sección Sobre mí -->
+  <section id="sobre-mi" class="max-w-3xl mx-auto mb-16 px-4 animate-fade-in-up">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4 text-center">Sobre mí</h2>
+    <p class="text-lg leading-relaxed text-dark/80 text-justify">
+      Soy un joven desarrollador de software, apasionado por la tecnología y la programación. Con experiencia en la creación de proyectos, he desarrollado habilidades en HTML, CSS, y JavaScript para construir páginas web y aplicaciones interactivas, así como en programación con C++ para proyectos con Arduino, utilizando el simulador de circuitos Tinkercad.
+      <br><br>
+      Entre mis proyectos más destacados se encuentran Arimo, Martin Games, Martin Browser, y BitLink, donde he podido combinar mi interés por la creación de sistemas útiles con la experimentación en tecnologías emergentes, como la inteligencia artificial.
+    </p>
+  </section>
+  <!-- Sección Habilidades -->
+  <section id="habilidades" class="max-w-4xl mx-auto mb-16 px-4 animate-fade-in-up">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">Habilidades</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="card-skill">
+        <h3 class="text-xl font-semibold mb-2 text-dark">Uso de la IA para mejorar la productividad</h3>
+        <p class="text-dark/70 text-justify">Tengo formación para mejorar la productividad en todo tipo de tareas aplicando la inteligencia artificial.</p>
+      </div>
+      <div class="card-skill">
+        <h3 class="text-xl font-semibold mb-2 text-dark">Creación de agentes de inteligencia artificial</h3>
+        <p class="text-dark/70 text-justify">Tengo expriencia en el desarrollo de agentes basados en modelos de inteligencia artificial aplicado a todo tipo de ámbitos.</p>
+      </div>
+      <div class="card-skill">
+        <h3 class="text-xl font-semibold mb-2 text-dark">Creación de imágenes con IA</h3>
+        <p class="text-dark/70 text-justify">Tengo conocimientos en creación de imágenes con inteligencia artificial con varios modelos y plataformas.</p>
+      </div>
+      <div class="card-skill">
+        <h3 class="text-xl font-semibold mb-2 text-dark">Ciberseguridad</h3>
+        <p class="text-dark/70 text-justify">Tengo conocimientos en el ámbito de la ciberseguridad tanto desde el lador del consumidor como desde el del desarrollador.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Sección Proyectos -->
+  <section id="proyectos" class="max-w-5xl mx-auto mb-16 px-4 animate-fade-in-up">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">Proyectos</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card-project">
+        <h3 class="text-lg font-bold mb-2 text-dark">Kira AI</h3>
+        <p class="text-dark/70 mb-4 text-justify">Chatbot basado en GPT-4o-mini que ayuda en todo tipo de peticiones al usuario.</p>
+        <a href="kira-ai.html" class="inline-block px-6 py-2 rounded-full bg-accent text-white font-bold shadow-lg transition-all duration-200 hover:bg-primary hover:scale-105 mt-auto">Ver más</a>
+      </div>
+      <div class="card-project">
+        <h3 class="text-lg font-bold mb-2 text-dark">To do list</h3>
+        <p class="text-dark/70 mb-4 text-justify">Aplicación web y aplicación para Android de una lista de tareas básica con versiones tanto para escritorio como para teléfono móvil.</p>
+        <a href="to-do-list.html" class="inline-block px-6 py-2 rounded-full bg-accent text-white font-bold shadow-lg transition-all duration-200 hover:bg-primary hover:scale-105 mt-auto">Ver más</a>
+      </div>
+      <div class="card-project">
+        <h3 class="text-lg font-bold mb-2 text-dark">BitLink</h3>
+        <p class="text-dark/70 mb-4 text-justify">Sistema desarrollado para el microprocesador micro:bit que permite enviar código binario por señales de radio.</p>
+        <a href="bitlink.html" class="inline-block px-6 py-2 rounded-full bg-accent text-white font-bold shadow-lg transition-all duration-200 hover:bg-primary hover:scale-105 mt-auto">Ver más</a>
+      </div>
+    </div>
+  </section>
+  <!-- Sección Formación -->
+  <section id="formacion" class="max-w-4xl mx-auto mb-16 px-4 animate-fade-in-up">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">Formación</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="card-skill">
+        <h3 class="text-xl font-semibold mb-2 text-dark">Certificado profesional de Gestión de Proyectos</h3>
+        <p class="text-dark/70 text-justify">Google</p>
+        <p class="text-dark/70 text-justify">Junio de 2025 - Actualidad</p>
+      </div>
+      <div class="card-skill">
+        <h3 class="text-xl font-semibold mb-2 text-dark">Ciberseguridad para desarrolladores</h3>
+        <p class="text-dark/70 text-justify">Cyngo</p>
+        <p class="text-dark/70 text-justify">Julio de 2025 - Actualidad</p>
+      </div>
+      <div class="card-skill">
+        <h3 class="text-xl font-semibold mb-2 text-dark">IA Responsable y Prompt Engineering</h3>
+        <p class="text-dark/70 text-justify">Founderz</p>
+        <p class="text-dark/70 text-justify">Diciembre de 2024</p>
+      </div>
+      <div class="card-skill">
+        <h3 class="text-xl font-semibold mb-2 text-dark">HTML, CSS  y JS</h3>
+        <p class="text-dark/70 text-justify">Autodidacta</p>
+        <p class="text-dark/70 text-justify">Agosto de 2024 - Actualidad</p>
+      </div>
+    </div>
+  </section>
+  <!-- Sección Contacto -->
+  <section id="contacto" class="max-w-3xl mx-auto mb-20 px-4 animate-fade-in-up">
+    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4 text-center">Contacto</h2>
+    <ul class="text-lg space-y-3 text-center">
+      <li><a href="tel:+34699320466" class="btn-link">+34 699 320 466</a></li>
+      <li><a href="mailto:martin.gomez.acebo@gmail.com" class="btn-link">martin.gomez.acebo@gmail.com</a></li>
+      <li><a href="https://github.com/mgomezacebo" target="_blank" class="btn-link">github.com/mgomezacebo</a></li>
+    </ul>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-primary via-secondary to-accent text-white text-center py-8 animate-fade-in flex flex-col gap-2">
+    <div class="flex justify-center gap-4 mb-2">
+      <a href="https://github.com/mgomezacebo" class="btn-footer" title="GitHub"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.984-.399 3.003-.404 1.019.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+    </div>
+    <span>© 2024 Martín Gómez-Acebo Baldrich. Programador en Madrid.</span>
+  </footer>
+  <style>
+    .animate-fade-in { animation: fadeIn 1s; }
+    .animate-fade-in-up { animation: fadeInUp 1s; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .btn-primary {
+      @apply inline-block px-8 py-3 rounded-full bg-primary text-white font-bold shadow-lg hover:bg-accent hover:scale-105 transition-all duration-200;
+    }
+    .btn-secondary {
+      @apply inline-block px-6 py-2 rounded-full bg-secondary text-white font-semibold shadow hover:bg-primary hover:scale-105 transition-all duration-200;
+    }
+    .btn-link {
+      @apply inline-block px-4 py-1 rounded-full bg-accent/10 text-accent font-semibold hover:bg-accent hover:text-white transition-all duration-200;
+    }
+    .btn-footer {
+      @apply inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 text-white transition-all duration-200;
+    }
+    .nav-link {
+      @apply text-white/90 hover:text-accent px-4 py-2 rounded transition-colors duration-200 font-semibold;
+    }
+    .nav-link-mobile {
+      @apply text-primary font-bold px-4 py-2 rounded hover:bg-accent/10 hover:text-accent transition-all duration-200;
+    }
+    .card-skill {
+      @apply bg-white rounded-2xl shadow-lg p-6 flex flex-col gap-2 border-t-4 border-primary hover:scale-105 hover:shadow-2xl transition-transform duration-200;
+    }
+    .card-project {
+      @apply bg-gradient-to-br from-white via-secondary/10 to-accent/10 rounded-2xl shadow-lg p-6 flex flex-col gap-2 border-t-4 border-accent hover:scale-105 hover:shadow-2xl transition-transform duration-200;
+    }
+    .btn-vermas {
+      @apply inline-block px-6 py-2 rounded-full bg-accent text-white font-bold shadow-lg transition-all duration-200 hover:bg-primary hover:scale-105;
+    }
+  </style>
+</body>
+</html> 

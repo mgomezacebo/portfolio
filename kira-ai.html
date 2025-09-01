@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto | Martín Gómez-Acebo Baldrich</title>
+  <meta name="description" content="Detalles del proyecto de Martín Gómez-Acebo Baldrich, programador de software joven en Madrid. Descubre en qué consiste, cómo acceder y detalles del desarrollo.">
+  <meta name="keywords" content="Martín Gómez-Acebo Baldrich, programador Madrid, desarrollador web, proyecto, software, portfolio, joven, IA, inteligencia artificial, desarrollo">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="main.js"></script>
+  <link rel="icon" href="favicon.ico">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            primary: '#6366f1',
+            secondary: '#a78bfa',
+            accent: '#06b6d4',
+            bg: '#f8fafc',
+            dark: '#0f172a',
+          },
+        },
+      },
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="bg-bg text-dark font-sans">
+  <!-- Navbar lateral -->
+  <nav class="hidden md:flex flex-col fixed left-0 top-0 h-full w-60 bg-gradient-to-b from-primary via-secondary to-accent shadow-2xl py-8 px-2 animate-fade-in rounded-r-3xl">
+    <div class="flex items-center gap-3 mb-10">
+      <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md text-primary font-extrabold text-2xl">M</div>
+      <span class="text-2xl font-extrabold text-white tracking-tight">Martín</span>
+    </div>
+    <ul class="flex flex-col gap-3 text-lg font-semibold">
+      <li><a href="#en-que-consiste" class="block w-full text-white font-semibold px-2 py-3 rounded-lg">¿En qué consiste?</a></li>
+      <li><a href="#acceso" class="block w-full text-white font-semibold px-2 py-3 rounded-lg">Acceso</a></li>
+      <li><a href="#info-desarrollo" class="block w-full text-white font-semibold px-2 py-3 rounded-lg">Sobre el desarrollo</a></li>
+    </ul>
+    <a href="index.html" class="btn-secondary mt-auto text-white font-bold">Inicio</a>
+  </nav>
+  <!-- Navbar móvil -->
+  <nav class="md:hidden flex justify-between items-center px-4 py-4 bg-gradient-to-r from-primary via-secondary to-accent shadow animate-fade-in">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md text-primary font-extrabold text-xl">M</div>
+      <span class="text-xl font-extrabold text-white tracking-tight">Proyecto</span>
+    </div>
+    <a href="index.html" class="text-white font-bold px-4 py-2 rounded transition-all duration-200 hover:bg-accent/10 hover:text-accent">Inicio</a>
+  </nav>
+  <main class="md:ml-60 max-w-3xl mx-auto px-4 py-12 animate-fade-in-up">
+    <!-- Encabezado -->
+    <header class="mb-10 text-center">
+      <h1 class="text-4xl font-extrabold text-primary mb-2">Kira AI</h1>
+      <h2 class="text-lg text-dark/70">Asistente con IA. Anteriormente Arimo</h2>
+    </header>
+    <!-- ¿En qué consiste? -->
+    <section id="en-que-consiste" class="mb-10">
+      <h3 class="text-2xl font-bold text-accent mb-2">¿En qué consiste?</h3>
+      <div class="card-skill">
+        <p class="text-dark/80">Kira AI consiste en un asistente de IA que ayuda al usuario en toda clase de tareas. Este asistente funciona con el modelo GPT-4o-mini de OpenAI y es completamente gratuito y sin restricciones.</p>
+      </div>
+    </section>
+    <!-- Acceso al proyecto -->
+    <section id="acceso" class="mb-10">
+      <h3 class="text-2xl font-bold text-accent mb-2">Acceso al proyecto</h3>
+      <div class="mt-10 flex">
+        <a href="https://kira-ia.vercel.app/" class="inline-block ml-2 px-6 py-2 rounded-full bg-accent text-white font-bold shadow-lg transition-all duration-200 hover:bg-primary hover:scale-105">Versión web</a>
+      </div>
+    </section>
+    <!-- Información sobre el desarrollo -->
+    <section id="info-desarrollo" class="mb-10">
+      <h3 class="text-2xl font-bold text-accent mb-4">Información sobre el desarrollo</h3>
+      <div class="space-y-6">
+        <div class="card-project">
+          <h4 class="font-semibold mb-1 text-dark">¿Cuál es la base de Kira AI?</h4>
+          <p class="text-dark/70">Kira AI se basa en un proyecto propio desarrollado anteriormente llamado Arimo que era otro asistente que utilizaba otro modelo de OpenAI inferior.</p>
+        </div>
+        <div class="card-project">
+          <h4 class="font-semibold mb-1 text-dark">¿Cómo se ha hecho Kira AI?</h4>
+          <p class="text-dark/70">Para la conexión con el modelo de OpenAI se utiliza la plataforma Chatbase.co que permite hacer una conexión con el modelo y facilita una interfaz de chat intuitiva. en lo relativo al system promt es propio utilizando mis conocimientos en promt engineering. La página web del proyecto ha sido realizada con HTML, JavaScript y Tailwin CSS mediante un CDN.</p>
+        </div>
+        <div class="card-project">
+          <h4 class="font-semibold mb-1 text-dark">¿Cuánto tiempo lleva desarrollandose?</h4>
+          <p class="text-dark/70">Kira AI es un proyecto que está en continua mejora como ya lo estaba Arimo. La actualización de Arimo a Kira llevó unas dos semanas. Pero siempre se está trabajando en actualizaciones.</p>
+        </div>
+        <div class="card-project">
+          <h4 class="font-semibold mb-1 text-dark">¿Cuáles serán las próximas actualizaciones?</h4>
+          <p class="text-dark/70">Actualmente se estoy trabajando en una actualización para incluir una versión del modelo en formato de chat de voz con la ayuda de la plataforma ElevenLabs. en cualquier caso para ver las últimas novedades del proyecto recomiendo ver el GitHub del proyecto.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Botón GitHub -->
+    <div class="mt-10 flex">
+      <a href="" class="inline-block ml-2 px-6 py-2 rounded-full bg-accent text-white font-bold shadow-lg transition-all duration-200 hover:bg-primary hover:scale-105">Ver en GitHub</a>
+    </div>
+  </main>
+  <footer class="bg-gradient-to-r from-primary via-secondary to-accent text-white text-center py-8 animate-fade-in flex flex-col gap-2 mt-10 rounded-t-3xl">
+    <div class="flex justify-center gap-4 mb-2">
+      <a href="https://github.com/mgomezacebo" class="btn-footer" title="GitHub"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.984-.399 3.003-.404 1.019.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+    </div>
+    <span>© 2024 Martín Gómez-Acebo Baldrich. Programador en Madrid.</span>
+  </footer>
+  <style>
+    .animate-fade-in { animation: fadeIn 1s; }
+    .animate-fade-in-up { animation: fadeInUp 1s; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .btn-primary {
+      @apply inline-block px-8 py-3 rounded-full bg-primary text-white font-bold shadow-lg hover:bg-accent hover:scale-105 transition-all duration-200;
+    }
+    .btn-secondary {
+      @apply inline-block px-6 py-2 rounded-full bg-secondary text-white font-semibold shadow hover:bg-primary hover:scale-105 transition-all duration-200;
+    }
+    .btn-link {
+      @apply inline-block px-4 py-1 rounded-full bg-accent/10 text-accent font-semibold hover:bg-accent hover:text-white transition-all duration-200;
+    }
+    .btn-footer {
+      @apply inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 text-white transition-all duration-200;
+    }
+    .nav-link {
+      @apply text-white/90 hover:text-accent px-4 py-2 rounded transition-colors duration-200 font-semibold;
+    }
+    .nav-link-mobile {
+      @apply text-primary font-bold px-4 py-2 rounded hover:bg-accent/10 hover:text-accent transition-all duration-200;
+    }
+    .card-skill {
+      @apply bg-white rounded-2xl shadow-lg p-6 flex flex-col gap-2 border-t-4 border-primary hover:scale-105 hover:shadow-2xl transition-transform duration-200;
+    }
+    .card-project {
+      @apply bg-gradient-to-br from-white via-secondary/10 to-accent/10 rounded-2xl shadow-lg p-6 flex flex-col gap-2 border-t-4 border-accent hover:scale-105 hover:shadow-2xl transition-transform duration-200;
+    }
+  </style>
+</body>
+</html> 
