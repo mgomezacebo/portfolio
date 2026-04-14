@@ -1,213 +1,450 @@
 <!DOCTYPE html>
-<html lang="es">
+
+<html class="dark" lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Martín Gómez-Acebo Baldrich | Desarrollador en Madrid</title>
-  <meta name="description" content="Portfolio de Martín Gómez-Acebo Baldrich, programador de software joven en Madrid. Descubre mis habilidades, proyectos y cómo contactarme. Especializado en desarrollo web y optimizado para búsquedas de programadores en Madrid.">
-  <meta name="keywords" content="Martín Gómez-Acebo Baldrich, programador Madrid, desarrollador web Madrid, software, portfolio, joven, IA, inteligencia artificial, proyectos, contacto">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="main.js"></script>
-  <link rel="icon" href="favicon.ico">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
-          colors: {
-            primary: '#6366f1', // Indigo-500
-            secondary: '#a78bfa', // Violet-400
-            accent: '#06b6d4', // Cyan-500
-            bg: '#f8fafc', // Slate-50
-            dark: '#0f172a', // Slate-900
-          },
-        },
-      },
-    }
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Martín Gómez-Acebo</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#131314",
+                        "tertiary-fixed-dim": "#ffb786",
+                        "on-primary-container": "#00285d",
+                        "surface-container-lowest": "#0e0e0f",
+                        "outline": "#8c909f",
+                        "secondary-fixed-dim": "#d2bbff",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#5a00c6",
+                        "error-container": "#93000a",
+                        "surface-container-highest": "#353436",
+                        "tertiary": "#ffb786",
+                        "on-secondary-fixed": "#25005a",
+                        "outline-variant": "#424754",
+                        "surface-tint": "#adc6ff",
+                        "on-primary": "#002e6a",
+                        "primary-container": "#4d8eff",
+                        "on-tertiary-fixed": "#311400",
+                        "inverse-primary": "#005ac2",
+                        "primary-fixed": "#d8e2ff",
+                        "on-error": "#690005",
+                        "surface-container-high": "#2a2a2b",
+                        "surface": "#131314",
+                        "on-primary-fixed": "#001a42",
+                        "secondary-container": "#6001d1",
+                        "secondary": "#d2bbff",
+                        "on-tertiary-container": "#461f00",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "on-secondary-container": "#c9aeff",
+                        "background": "#131314",
+                        "primary-fixed-dim": "#adc6ff",
+                        "tertiary-fixed": "#ffdcc6",
+                        "primary": "#adc6ff",
+                        "on-surface-variant": "#c2c6d6",
+                        "secondary-fixed": "#eaddff",
+                        "on-secondary": "#3f008e",
+                        "on-background": "#e5e2e3",
+                        "on-primary-fixed-variant": "#004395",
+                        "on-error-container": "#ffdad6",
+                        "surface-variant": "#353436",
+                        "surface-bright": "#3a393a",
+                        "inverse-on-surface": "#313031",
+                        "tertiary-container": "#df7412",
+                        "surface-container-low": "#1c1b1c",
+                        "on-tertiary": "#502400",
+                        "on-surface": "#e5e2e3",
+                        "surface-container": "#201f20",
+                        "inverse-surface": "#e5e2e3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #131314;
+            color: #e5e2e3;
+        }
+
+        .font-headline {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(53, 52, 54, 0.4);
+            backdrop-filter: blur(24px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-card:hover {
+            background: rgba(77, 142, 255, 0.1);
+            border-color: rgba(173, 198, 255, 0.3);
+        }
+
+        .liquid-bg {
+            background: radial-gradient(circle at 50% -20%, rgba(77, 142, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 0% 100%, rgba(96, 1, 209, 0.1) 0%, transparent 40%);
+        }
+    </style>
 </head>
-<body class="bg-bg text-dark font-sans">
-  <!-- Redirección automática -->
-  <script>
-    // Solo redirige si no hay hash en la URL
-    if (!window.location.hash) {
-      if (window.innerWidth <= 768) {
-        window.location.hash = 'mobile';
-      } else {
-        window.location.hash = 'desktop';
-      }
-    }
-  </script>
-  <!-- Navbar -->
-  <header id="desktop" class="hidden md:block sticky top-0 z-50 bg-gradient-to-r from-primary via-secondary to-accent shadow-lg animate-fade-in">
-    <nav class="flex justify-between items-center px-10 py-5">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md text-primary font-extrabold text-2xl">M</div>
-        <span class="text-2xl font-extrabold text-white tracking-tight">Martín</span>
-      </div>
-      <ul class="flex gap-8 text-base font-semibold">
-        <li><a href="#sobre-mi" class="text-white font-semibold px-4 py-2 rounded transition-colors duration-200 hover:text-accent">Sobre mí</a></li>
-        <li><a href="#habilidades" class="text-white font-semibold px-4 py-2 rounded transition-colors duration-200 hover:text-accent">Habilidades</a></li>
-        <li><a href="#proyectos" class="text-white font-semibold px-4 py-2 rounded transition-colors duration-200 hover:text-accent">Proyectos</a></li>
-        <li><a href="#contacto" class="text-white font-semibold px-4 py-2 rounded transition-colors duration-200 hover:text-accent">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <!-- Navbar móvil -->
-  <header id="mobile" class="md:hidden sticky top-0 z-50 bg-gradient-to-r from-primary via-secondary to-accent shadow-lg animate-fade-in">
-    <nav class="flex justify-between items-center px-4 py-4">
-      <div class="flex items-center gap-2">
-        <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md text-primary font-extrabold text-xl">M</div>
-        <span class="text-xl font-extrabold text-white tracking-tight">Martín</span>
-      </div>
-      <button id="menu-btn" class="focus:outline-none">
-        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-    </nav>
-    <div id="mobile-menu" class="hidden flex-col gap-2 px-2 py-2 bg-white/90 shadow animate-fade-in rounded-b-xl">
-      <a href="#sobre-mi" class="block w-full text-white font-bold px-4 py-3 rounded-lg bg-primary/80 shadow-sm mb-2 transition-all duration-200 hover:bg-accent/90 hover:text-white">Sobre mí</a>
-      <a href="#habilidades" class="block w-full text-white font-bold px-4 py-3 rounded-lg bg-primary/80 shadow-sm mb-2 transition-all duration-200 hover:bg-accent/90 hover:text-white">Habilidades</a>
-      <a href="#proyectos" class="block w-full text-white font-bold px-4 py-3 rounded-lg bg-primary/80 shadow-sm mb-2 transition-all duration-200 hover:bg-accent/90 hover:text-white">Proyectos</a>
-      <a href="#formacion" class="block w-full text-white font-bold px-4 py-3 rounded-lg bg-primary/80 shadow-sm mb-2 transition-all duration-200 hover:bg-accent/90 hover:text-white">Formación</a>
-      <a href="#contacto" class="block w-full text-white font-bold px-4 py-3 rounded-lg bg-primary/80 shadow-sm transition-all duration-200 hover:bg-accent/90 hover:text-white">Contacto</a>
-    </div>
-  </header>
-  <!-- Hero -->
-  <section class="max-w-4xl mx-auto mt-16 mb-12 px-4 text-center animate-fade-in-up">
-    <h1 class="text-4xl md:text-5xl font-extrabold text-primary mb-4">¡Hola! Soy <span class="text-accent">Martín</span></h1>
-    <h2 class="text-xl md:text-2xl text-dark/80 mb-6">Desarrollador de software apasionado por crear soluciones innovadoras</h2>
-  </section>
-  <!-- Separador -->
-  <div class="w-full h-1 bg-gradient-to-r from-primary via-secondary to-accent mb-12"></div>
-  <!-- Sección Sobre mí -->
-  <section id="sobre-mi" class="max-w-3xl mx-auto mb-16 px-4 animate-fade-in-up">
-    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4 text-center">Sobre mí</h2>
-    <p class="text-lg leading-relaxed text-dark/80 text-justify">
-      Soy un joven desarrollador de software, apasionado por la tecnología y la programación. Con experiencia en la creación de proyectos, he desarrollado habilidades en HTML, CSS, y JavaScript para construir páginas web y aplicaciones interactivas, así como en programación con C++ para proyectos con Arduino, utilizando el simulador de circuitos Tinkercad.
-      <br><br>
-      Entre mis proyectos más destacados se encuentran Arimo, Martin Games, Martin Browser, y BitLink, donde he podido combinar mi interés por la creación de sistemas útiles con la experimentación en tecnologías emergentes, como la inteligencia artificial.
-    </p>
-  </section>
-  <!-- Sección Habilidades -->
-  <section id="habilidades" class="max-w-4xl mx-auto mb-16 px-4 animate-fade-in-up">
-    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">Habilidades</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="card-skill">
-        <h3 class="text-xl font-semibold mb-2 text-dark">Uso de la IA para mejorar la productividad</h3>
-        <p class="text-dark/70 text-justify">Tengo formación para mejorar la productividad en todo tipo de tareas aplicando la inteligencia artificial.</p>
-      </div>
-      <div class="card-skill">
-        <h3 class="text-xl font-semibold mb-2 text-dark">Creación de agentes de inteligencia artificial</h3>
-        <p class="text-dark/70 text-justify">Tengo expriencia en el desarrollo de agentes basados en modelos de inteligencia artificial aplicado a todo tipo de ámbitos.</p>
-      </div>
-      <div class="card-skill">
-        <h3 class="text-xl font-semibold mb-2 text-dark">Creación de imágenes con IA</h3>
-        <p class="text-dark/70 text-justify">Tengo conocimientos en creación de imágenes con inteligencia artificial con varios modelos y plataformas.</p>
-      </div>
-      <div class="card-skill">
-        <h3 class="text-xl font-semibold mb-2 text-dark">Ciberseguridad</h3>
-        <p class="text-dark/70 text-justify">Tengo conocimientos en el ámbito de la ciberseguridad tanto desde el lador del consumidor como desde el del desarrollador.</p>
-      </div>
-    </div>
-  </section>
-  <!-- Sección Proyectos -->
-  <section id="proyectos" class="max-w-5xl mx-auto mb-16 px-4 animate-fade-in-up">
-    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">Proyectos</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="card-project">
-        <h3 class="text-lg font-bold mb-2 text-dark">Kira AI</h3>
-        <p class="text-dark/70 mb-4 text-justify">Chatbot basado en GPT-4o-mini que ayuda en todo tipo de peticiones al usuario.</p>
-        <a href="kira-ai.html" class="inline-block px-6 py-2 rounded-full bg-accent text-white font-bold shadow-lg transition-all duration-200 hover:bg-primary hover:scale-105 mt-auto">Ver más</a>
-      </div>
-      <div class="card-project">
-        <h3 class="text-lg font-bold mb-2 text-dark">To do list</h3>
-        <p class="text-dark/70 mb-4 text-justify">Aplicación web y aplicación para Android de una lista de tareas básica con versiones tanto para escritorio como para teléfono móvil.</p>
-        <a href="to-do-list.html" class="inline-block px-6 py-2 rounded-full bg-accent text-white font-bold shadow-lg transition-all duration-200 hover:bg-primary hover:scale-105 mt-auto">Ver más</a>
-      </div>
-      <div class="card-project">
-        <h3 class="text-lg font-bold mb-2 text-dark">BitLink</h3>
-        <p class="text-dark/70 mb-4 text-justify">Sistema desarrollado para el microprocesador micro:bit que permite enviar código binario por señales de radio.</p>
-        <a href="bitlink.html" class="inline-block px-6 py-2 rounded-full bg-accent text-white font-bold shadow-lg transition-all duration-200 hover:bg-primary hover:scale-105 mt-auto">Ver más</a>
-      </div>
-    </div>
-  </section>
-  <!-- Sección Formación -->
-  <section id="formacion" class="max-w-4xl mx-auto mb-16 px-4 animate-fade-in-up">
-    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">Formación</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="card-skill">
-        <h3 class="text-xl font-semibold mb-2 text-dark">Certificado profesional de Gestión de Proyectos</h3>
-        <p class="text-dark/70 text-justify">Google</p>
-        <p class="text-dark/70 text-justify">Junio de 2025 - Actualidad</p>
-      </div>
-      <div class="card-skill">
-        <h3 class="text-xl font-semibold mb-2 text-dark">Ciberseguridad para desarrolladores</h3>
-        <p class="text-dark/70 text-justify">Cyngo</p>
-        <p class="text-dark/70 text-justify">Julio de 2025 - Actualidad</p>
-      </div>
-      <div class="card-skill">
-        <h3 class="text-xl font-semibold mb-2 text-dark">IA Responsable y Prompt Engineering</h3>
-        <p class="text-dark/70 text-justify">Founderz AI Business School</p>
-        <p class="text-dark/70 text-justify">Diciembre de 2024</p>
-      </div>
-      <div class="card-skill">
-        <h3 class="text-xl font-semibold mb-2 text-dark">HTML, CSS  y JS</h3>
-        <p class="text-dark/70 text-justify">Autodidacta</p>
-        <p class="text-dark/70 text-justify">Agosto de 2024 - Actualidad</p>
-      </div>
-    </div>
-  </section>
-  <!-- Sección Contacto -->
-  <section id="contacto" class="max-w-3xl mx-auto mb-20 px-4 animate-fade-in-up">
-    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4 text-center">Contacto</h2>
-    <ul class="text-lg space-y-3 text-center">
-      <li><a href="tel:+34699320466" class="btn-link">+34 699 320 466</a></li>
-      <li><a href="mailto:martin.gomez.acebo@gmail.com" class="btn-link">martin.gomez.acebo@gmail.com</a></li>
-      <li><a href="https://github.com/mgomezacebo" target="_blank" class="btn-link">github.com/mgomezacebo</a></li>
-    </ul>
-  </section>
-  <!-- Footer -->
-  <footer class="bg-gradient-to-r from-primary via-secondary to-accent text-white text-center py-8 animate-fade-in flex flex-col gap-2">
-    <div class="flex justify-center gap-4 mb-2">
-      <a href="https://github.com/mgomezacebo" class="btn-footer" title="GitHub"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5c-6.627 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.984-.399 3.003-.404 1.019.005 2.047.138 3.006.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.371.823 1.102.823 2.222v3.293c0 .322.218.694.825.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
-    </div>
-    <span>© 2025 Martín Gómez-Acebo Baldrich. Programador en Madrid.</span>
-  </footer>
-  <style>
-    .animate-fade-in { animation: fadeIn 1s; }
-    .animate-fade-in-up { animation: fadeInUp 1s; }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-    .btn-primary {
-      @apply inline-block px-8 py-3 rounded-full bg-primary text-white font-bold shadow-lg hover:bg-accent hover:scale-105 transition-all duration-200;
-    }
-    .btn-secondary {
-      @apply inline-block px-6 py-2 rounded-full bg-secondary text-white font-semibold shadow hover:bg-primary hover:scale-105 transition-all duration-200;
-    }
-    .btn-link {
-      @apply inline-block px-4 py-1 rounded-full bg-accent/10 text-accent font-semibold hover:bg-accent hover:text-white transition-all duration-200;
-    }
-    .btn-footer {
-      @apply inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/20 hover:bg-white/40 text-white transition-all duration-200;
-    }
-    .nav-link {
-      @apply text-white/90 hover:text-accent px-4 py-2 rounded transition-colors duration-200 font-semibold;
-    }
-    .nav-link-mobile {
-      @apply text-primary font-bold px-4 py-2 rounded hover:bg-accent/10 hover:text-accent transition-all duration-200;
-    }
-    .card-skill {
-      @apply bg-white rounded-2xl shadow-lg p-6 flex flex-col gap-2 border-t-4 border-primary hover:scale-105 hover:shadow-2xl transition-transform duration-200;
-    }
-    .card-project {
-      @apply bg-gradient-to-br from-white via-secondary/10 to-accent/10 rounded-2xl shadow-lg p-6 flex flex-col gap-2 border-t-4 border-accent hover:scale-105 hover:shadow-2xl transition-transform duration-200;
-    }
-    .btn-vermas {
-      @apply inline-block px-6 py-2 rounded-full bg-accent text-white font-bold shadow-lg transition-all duration-200 hover:bg-primary hover:scale-105;
-    }
-  </style>
+
+<body class="selection:bg-primary-container selection:text-white">
+    <!-- TopAppBar -->
+    <header
+        class="fixed top-8 left-1/2 -translate-x-1/2 rounded-full w-[90%] max-w-5xl bg-slate-900/50 backdrop-blur-3xl flex justify-between items-center px-8 py-4 z-50 no-line border border-white/10 shadow-[0_0_40px_rgba(59,130,246,0.1)]">
+        <div class="text-xl font-black text-white tracking-tighter">MARTÍN</div>
+        <nav class="hidden md:flex gap-8 items-center">
+            <a class="font-['Manrope'] tracking-tight text-sm uppercase text-blue-400 font-bold hover:text-white transition-all duration-500"
+                href="#hero">Inicio</a>
+            <a class="font-['Manrope'] tracking-tight text-sm uppercase text-slate-400 hover:text-white transition-all duration-500"
+                href="#about">Sobre mí</a>
+            <a class="font-['Manrope'] tracking-tight text-sm uppercase text-slate-400 hover:text-white transition-all duration-500"
+                href="#services">Qué puedo crear</a>
+            <a class="font-['Manrope'] tracking-tight text-sm uppercase text-slate-400 hover:text-white transition-all duration-500"
+                href="#stack">Stack</a>
+            <a class="font-['Manrope'] tracking-tight text-sm uppercase text-slate-400 hover:text-white transition-all duration-500"
+                href="#formacion">Formación</a>
+            <a class="font-['Manrope'] tracking-tight text-sm uppercase text-slate-400 hover:text-white transition-all duration-500"
+                href="#projects">Proyectos</a>
+        </nav>
+        <button
+            class="bg-primary text-on-primary-container px-6 py-2 rounded-full font-bold text-sm uppercase tracking-wider scale-105 hover:shadow-[0_0_20px_rgba(173,198,255,0.4)] transition-all">Contacto</button>
+    </header>
+    <main class="liquid-bg pt-32 pb-24">
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-6 py-24 flex flex-col items-center text-center" id="hero">
+
+            <h1
+                class="font-headline text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-[1.1] max-w-4xl bg-gradient-to-br from-white to-white/60 bg-clip-text text-transparent">
+                Construyo soluciones digitales con IA, automatización y diseño
+            </h1>
+            <p class="font-body text-lg md:text-xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
+                Desarrollo aplicaciones web, sistemas y herramientas enfocadas en productividad, aprendizaje y
+                comportamiento.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6">
+                <a href="#projects"
+                    class="px-10 py-4 rounded-full bg-primary text-on-primary font-bold shadow-[0_0_30px_rgba(173,198,255,0.3)] hover:scale-105 transition-transform">Ver
+                    proyectos</a>
+                <a href="#contact"
+                    class="px-10 py-4 rounded-full glass-card text-white font-bold border border-white/10 hover:border-white/20 transition-all">Contactar</a>
+            </div>
+        </section>
+        <!-- Sobre Mí Section -->
+        <section class="max-w-7xl mx-auto px-6 py-24" id="about">
+            <div
+                class="relative glass-card p-8 md:p-16 rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl">
+                <!-- Efectos de luz de fondo -->
+                <div
+                    class="absolute -top-32 -right-32 w-96 h-96 bg-primary/20 blur-[120px] rounded-full pointer-events-none">
+                </div>
+                <div
+                    class="absolute -bottom-32 -left-32 w-96 h-96 bg-secondary/20 blur-[120px] rounded-full pointer-events-none">
+                </div>
+
+                <div class="relative z-10 grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+                    <!-- Texto -->
+                    <div class="flex flex-col items-start text-left">
+                        <div
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-high border border-outline-variant/30 mb-8 shadow-inner">
+                            <span class="material-symbols-outlined text-primary text-sm">school</span>
+                            <span class="text-xs font-bold tracking-widest text-primary uppercase">Estudiante &
+                                Maker</span>
+                        </div>
+                        <h2 class="font-headline text-4xl md:text-5xl font-extrabold mb-8 text-white">Sobre Mí</h2>
+                        <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-6">
+                            Soy <strong class="text-white font-semibold">estudiante de 4º de ESO</strong> con interés en
+                            la tecnología y cómo puede aplicarse a problemas reales. Actualmente estoy aprendiendo a
+                            programar y desarrollo proyectos por mi cuenta.
+                        </p>
+                        <p class="font-body text-lg text-on-surface-variant leading-relaxed">
+                            Me interesa especialmente <strong class="text-white font-semibold">aprender
+                                haciendo</strong>, construir cosas útiles desde cero y entender no solo cómo funcionan,
+                            sino también <strong class="text-white font-semibold">cómo pueden aportar valor</strong> a
+                            otros.
+                        </p>
+                    </div>
+
+                    <!-- Tarjetas flotantes -->
+                    <div class="grid grid-cols-2 gap-4 md:gap-6">
+                        <div
+                            class="glass-card p-6 md:p-8 rounded-3xl flex flex-col items-start gap-4 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(173,198,255,0.15)] transition-all duration-300">
+                            <div
+                                class="w-14 h-14 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mb-2 shadow-[0_0_15px_rgba(173,198,255,0.2)]">
+                                <span class="material-symbols-outlined">rocket_launch</span>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg mb-1">Proactivo</h4>
+                                <p class="text-sm text-on-surface-variant">Aprendizaje autodidacta constante</p>
+                            </div>
+                        </div>
+                        <div
+                            class="glass-card p-6 md:p-8 rounded-3xl flex flex-col items-start gap-4 hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(210,187,255,0.15)] transition-all duration-300 md:translate-y-12">
+                            <div
+                                class="w-14 h-14 rounded-full bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary mb-2 shadow-[0_0_15px_rgba(210,187,255,0.2)]">
+                                <span class="material-symbols-outlined">lightbulb</span>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg mb-1">Curioso</h4>
+                                <p class="text-sm text-on-surface-variant">Busco entender el porqué de las cosas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Qué puedo crear Section -->
+        <section class="max-w-7xl mx-auto px-6 py-24" id="services">
+            <h2 class="font-headline text-4xl font-bold mb-16 text-center text-white">Qué puedo crear</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card p-8 rounded-lg flex flex-col gap-6 group transition-all duration-500">
+                    <span class="material-symbols-outlined text-4xl text-primary"
+                        data-icon="auto_awesome">auto_awesome</span>
+                    <h3 class="font-headline text-xl font-bold text-white">Aplicaciones web con IA</h3>
+                    <p class="text-on-surface-variant text-sm">Aplicaciones inteligentes que aprenden y se adaptan al
+                        flujo del usuario.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass-card p-8 rounded-lg flex flex-col gap-6 group transition-all duration-500">
+                    <span class="material-symbols-outlined text-4xl text-secondary"
+                        data-icon="dynamic_feed">dynamic_feed</span>
+                    <h3 class="font-headline text-xl font-bold text-white">Automatización de procesos</h3>
+                    <p class="text-on-surface-variant text-sm">Eliminación de tareas repetitivas mediante flujos
+                        inteligentes en Make.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass-card p-8 rounded-lg flex flex-col gap-6 group transition-all duration-500">
+                    <span class="material-symbols-outlined text-4xl text-primary"
+                        data-icon="data_exploration">data_exploration</span>
+                    <h3 class="font-headline text-xl font-bold text-white">Sistemas en Notion</h3>
+                    <p class="text-on-surface-variant text-sm">Arquitecturas en Notion para gestión de proyectos y bases
+                        de conocimiento.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="glass-card p-8 rounded-lg flex flex-col gap-6 group transition-all duration-500">
+                    <span class="material-symbols-outlined text-4xl text-secondary" data-icon="forum">forum</span>
+                    <h3 class="font-headline text-xl font-bold text-white">Chatbots personalizados con IA</h3>
+                    <p class="text-on-surface-variant text-sm">Asistentes conversacionales entrenados con datos
+                        específicos para atención y soporte.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="glass-card p-8 rounded-lg flex flex-col gap-6 group transition-all duration-500">
+                    <span class="material-symbols-outlined text-4xl text-primary"
+                        data-icon="design_services">design_services</span>
+                    <h3 class="font-headline text-xl font-bold text-white">Interfaces digitales</h3>
+                    <p class="text-on-surface-variant text-sm">Diseño de experiencias centradas en la simplicidad y la
+                        estética moderna.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="glass-card p-8 rounded-lg flex flex-col gap-6 group transition-all duration-500">
+                    <span class="material-symbols-outlined text-4xl text-secondary" data-icon="web">web</span>
+                    <h3 class="font-headline text-xl font-bold text-white">Páginas web</h3>
+                    <p class="text-on-surface-variant text-sm">Sitios web optimizados para conversión y rendimiento con
+                        foco en resultados.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Stack & Herramientas -->
+        <section class="max-w-7xl mx-auto px-6 py-24" id="stack">
+            <h2 class="font-headline text-4xl font-bold mb-16 text-white">Stack y Herramientas</h2>
+            <div class="glass-card p-12 rounded-xl flex flex-col gap-12">
+                <div>
+                    <h4 class="text-primary font-bold text-xs uppercase tracking-widest mb-6">Nivel Avanzado</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="px-5 py-2 rounded-full bg-surface-container-highest text-white text-sm">ChatGPT</span>
+                        <span
+                            class="px-5 py-2 rounded-full bg-surface-container-highest text-white text-sm">Gemini</span>
+                        <span
+                            class="px-5 py-2 rounded-full bg-surface-container-highest text-white text-sm">Chatbase</span>
+                        <span class="px-5 py-2 rounded-full bg-surface-container-highest text-white text-sm">Google
+                            Workspace</span>
+                        <span
+                            class="px-5 py-2 rounded-full bg-surface-container-highest text-white text-sm">NotebookLM</span>
+                        <span
+                            class="px-5 py-2 rounded-full bg-surface-container-highest text-white text-sm">Stitch</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-secondary font-bold text-xs uppercase tracking-widest mb-6">Nivel Medio</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="px-5 py-2 rounded-full bg-surface-container-highest text-white text-sm">GitHub</span>
+                        <span
+                            class="px-5 py-2 rounded-full bg-surface-container-highest text-white text-sm">Vercel</span>
+                        <span
+                            class="px-5 py-2 rounded-full bg-surface-container-highest text-white text-sm">Canva</span>
+                        <span class="px-5 py-2 rounded-full bg-surface-container-highest text-white text-sm">Groq
+                            Cloud</span>
+                        <span
+                            class="px-5 py-2 rounded-full bg-surface-container-highest text-white text-sm">Antigravity</span>
+                        <span
+                            class="px-5 py-2 rounded-full bg-surface-container-highest text-white text-sm">Office</span>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-on-surface-variant font-bold text-xs uppercase tracking-widest mb-6">Nivel Básico
+                    </h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span
+                            class="px-5 py-2 rounded-full bg-surface-container-highest text-white text-sm">Notion</span>
+                        <span class="px-5 py-2 rounded-full bg-surface-container-highest text-white text-sm">Make</span>
+                        <span class="px-5 py-2 rounded-full bg-surface-container-highest text-white text-sm">N8N</span>
+                        <span class="px-5 py-2 rounded-full bg-surface-container-highest text-white text-sm">Power
+                            BI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Formación -->
+        <section id="formacion" class="max-w-7xl mx-auto px-6 py-24">
+            <h2 class="font-headline text-4xl font-bold mb-16 text-white">Formación</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-lg">
+                    <h3 class="font-headline text-xl font-bold mb-6 text-primary">IA &amp; Prompting</h3>
+                    <ul class="space-y-4 text-on-surface-variant text-sm">
+                        <li>• Prompt Engineering & IA Responsable (Founderz & Microsoft)</li>
+                        <li>• Transforamación de la empresa con IA (Microsoft)</li>
+                        <li>• IA Generativa de Google (Santander Open Academy)</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-8 rounded-lg">
+                    <h3 class="font-headline text-xl font-bold mb-6 text-secondary">Dev &amp; Design</h3>
+                    <ul class="space-y-4 text-on-surface-variant text-sm">
+                        <li>• HTML / CSS (Autodidacta)</li>
+                        <li>• Diseño de UI/UX (Madrid Aula Digital)</li>
+                        <li>• Diseño de apliaciones (Madrid Aula Digital)</li>
+                        <li>• Notion (Autodidacta)</li>
+                    </ul>
+                </div>
+                <div class="glass-card p-8 rounded-lg">
+                    <h3 class="font-headline text-xl font-bold mb-6 text-white">Business &amp; Data</h3>
+                    <ul class="space-y-4 text-on-surface-variant text-sm">
+                        <li>• Introduction to Proyect Management (Google)</li>
+                        <li>• Introduction to Data Analytics (Google)</li>
+                        <li>• Power BI (Autodidacta)</li>
+                        <li>• Negociación (ESADE & Santander Open Academy)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Proyectos Section -->
+        <section class="max-w-7xl mx-auto px-6 py-24" id="projects">
+            <h2 class="font-headline text-4xl font-bold mb-16 text-white">Proyectos Destacados</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Project 1 -->
+                <div class="group relative">
+                    <div
+                        class="absolute inset-0 bg-primary/20 rounded-xl blur-3xl opacity-0 group-hover:opacity-30 transition-opacity">
+                    </div>
+                    <div class="relative glass-card overflow-hidden rounded-xl h-full flex flex-col">
+                        <div class="p-8 flex flex-col grow">
+                            <h3 class="font-headline text-2xl font-bold text-white mb-4">Studyfy</h3>
+                            <p class="text-on-surface-variant text-base mb-8 leading-relaxed">
+                                Plataforma educativa que centraliza el estudio en un solo lugar ayudando al estudiante
+                                con su organización y transformando sus apuntes en material de estudio atractivo con IA.
+                            </p>
+                            <div class="mt-auto">
+                                <div class="flex flex-wrap gap-4">
+                                    <a href="https://test-studyfy.vercel.app/"
+                                        class="px-6 py-3 rounded-full bg-primary text-on-primary font-bold inline-flex items-center gap-2 hover:shadow-[0_0_20px_rgba(173,198,255,0.4)] transition-all">
+                                        Ver más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="group relative">
+                    <div
+                        class="absolute inset-0 bg-secondary/20 rounded-xl blur-3xl opacity-0 group-hover:opacity-30 transition-opacity">
+                    </div>
+                    <div class="relative glass-card overflow-hidden rounded-xl h-full flex flex-col">
+                        <div class="p-8 flex flex-col grow">
+                            <h3 class="font-headline text-2xl font-bold text-white mb-4">Good Scroll</h3>
+                            <p class="text-on-surface-variant text-base mb-8 leading-relaxed">
+                                Aplicación web que transforma el hábito de hacer scroll en una experiencia de
+                                aprendizaje sobre los sesgos cognitivos.
+                            </p>
+                            <div class="mt-auto">
+                                <div class="flex flex-wrap gap-4">
+                                    <a href="https://good-scroll.vercel.app/"
+                                        class="px-6 py-3 rounded-full bg-primary text-on-primary font-bold inline-flex items-center gap-2 hover:shadow-[0_0_20px_rgba(173,198,255,0.4)] transition-all">
+                                        Ver más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Diferencial Section -->
+        <section class="max-w-7xl mx-auto px-6 py-24 text-center">
+            <div class="glass-card p-16 rounded-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px]"></div>
+                <h2 class="font-headline text-3xl md:text-5xl font-bold text-white mb-10 max-w-3xl mx-auto">
+                    No me enfoco solo en aprender herramientas, sino en construir soluciones reales.
+                </h2>
+                <p class="font-body text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+                    Combino tecnología, inteligencia artificial y visión de negocio para crear productos útiles desde
+                    etapas tempranas. Trabajo con un enfoque práctico: entender, construir y mejorar.
+                </p>
+            </div>
+        </section>
+        <!-- Contacto Section -->
+        <section class="max-w-3xl mx-auto px-6 py-24 text-center" id="contact">
+            <h2 class="font-headline text-4xl font-bold mb-8 text-white">¿Hablamos?</h2>
+            <p class="font-body text-lg text-on-surface-variant mb-12">
+                Abierto a colaborar en proyectos, ideas o iniciativas relacionadas con tecnología, inteligencia
+                artificial y desarrollo digital.
+            </p>
+            <button
+                class="w-full sm:w-auto px-16 py-6 rounded-full bg-primary text-on-primary font-black text-xl tracking-tighter shadow-[0_0_50px_rgba(173,198,255,0.4)] hover:scale-105 transition-all">
+                CONTACTAR
+            </button>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-12 flex flex-col items-center gap-4 bg-transparent">
+        <div class="flex gap-8 mb-4">
+            <a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500 hover:text-blue-400 transition-colors"
+                href="https://github.com/mgomezacebo">GitHub</a>
+            <a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500 hover:text-blue-400 transition-colors"
+                href="https://www.linkedin.com/in/mgomezacebo/">LinkedIn</a>
+            <a class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500 hover:text-blue-400 transition-colors"
+                href="https://www.instagram.com/martingomezacebo/">Instagram</a>
+        </div>
+        <p class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500">© 2026 - Martín Gómez-Acebo</p>
+    </footer>
 </body>
 
-</html> 
-
+</html>
